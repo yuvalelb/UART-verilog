@@ -1,0 +1,51 @@
+##############################################################################
+# Clocks
+##############################################################################
+
+# This is nominally 20.000 ns, but set smaller to provide
+# more slack as protection from cycle to cycle jitter.
+NET "clk"       LOC = "E12"  | IOSTANDARD = LVCMOS33 | PERIOD = 19.200 ;
+
+##############################################################################
+# Serial Port (RS232)
+##############################################################################
+
+NET "txo" LOC = "F15"  | IOSTANDARD = LVCMOS33 ;
+NET "rxo" LOC = "E16"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+
+
+##############################################################################
+# Discrete Indicators (LED)
+##############################################################################
+
+NET "led<0>"        LOC = "R20"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "led<1>"        LOC = "T19"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "led<2>"        LOC = "U20"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+
+
+##############################################################################
+# Character Display (LCD)
+##############################################################################
+
+NET "lcdo<0>"     LOC = "Y13"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "lcdo<1>"     LOC = "AB18" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "lcdo<2>"     LOC = "AB17" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "lcdo<3>"     LOC = "AB12" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "lcdo<4>"     LOC = "AA12" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "lcdo<5>"     LOC = "Y16"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "lcdo<6>"     LOC = "AB16" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "lcdo<7>"     LOC = "Y15"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "lcdeo"         LOC = "AB4"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "lcdo<9>"        LOC = "Y14"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "lcdo<8>"        LOC = "W13"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+
+
+##############################################################################
+# Mechanical Switches (SW)
+##############################################################################
+
+NET "paritys"         LOC = "V8"   | IOSTANDARD = LVCMOS33 ;
+NET "bauds"         LOC = "U10"  | IOSTANDARD = LVCMOS33 ;
+NET "dls"         LOC = "U8"   | IOSTANDARD = LVCMOS33 ;
+NET "reset"         LOC = "T9"   | IOSTANDARD = LVCMOS33 ;
+
